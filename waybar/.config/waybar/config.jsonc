@@ -1,0 +1,112 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "width": 1280,
+  "margin-top": 9,
+  "modules-left": ["custom/power", "clock", "mpris"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["custom/pacman", "pulseaudio", "battery", "network", "custom/notification"],
+
+  "custom/pacman": {
+    "format": " {}   ",
+    "interval": 30,
+    "exec": "checkupdates | wc -l",
+    "on-click": "update-system",
+    "signal": 8
+  },
+
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "clock": {
+    "format": "󰥔   {:%I:%M %p}",
+    "format-alt": "󰥔   {:%a, %d. %b  %I:%M %p}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "󰂱  {volume}%",
+    "format-muted": "󰖁",
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+    "format-icons": {
+      "headphone": "  ",
+      "hands-free": " ",
+      "headset": "󰋎 ",
+      "phone": " ",
+      "portable": " ",
+      "car": "",
+      "default": ["󰖀", "󰕾"]
+    }
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{icon}   {essid}",
+    "format-ethernet": "󰈀   {ipaddr}/{cidr}",
+    "format-disconnected": "󰤭   disconnected",
+    "max-length": 50,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "on-click": "kitty --class=Impala -e impala"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "󰀨",
+      "active": "",
+      "default": ""
+    },
+
+    "sort-by-number": true
+  },
+
+  "mpris": {
+  	"format": "{player_icon} {dynamic}",
+    "dynamic-len": 30,
+    "dynamic-order":["title", "artist"],
+    "dynamic-separator": " - ",
+    "dynamic-importance_order": ["artist", "title"],
+    "artist-len": 30,
+  	"format-paused": "{status_icon} {dynamic}",
+  	"player-icons": {
+  		"default": "",
+  		"mpv": "🎵"
+  	},
+  	"status-icons": {
+  		"paused": ""
+  	},
+  },
+  "custom/notification": {
+       "tooltip": true,
+       "format": "<span size='16pt'>{icon}</span>",
+       "format-icons": {
+         "notification": "󱅫",
+         "none": "󰂜",
+         "dnd-notification": "󰂠",
+         "dnd-none": "󰪓",
+         "inhibited-notification": "󰂛",
+         "inhibited-none": "󰪑",
+         "dnd-inhibited-notification": "󰂛",
+         "dnd-inhibited-none": "󰪑"
+       },
+       "return-type": "json",
+       "exec-if": "which swaync-client",
+       "exec": "swaync-client -swb",
+       "on-click": "swaync-client -t -sw",
+       "on-click-right": "swaync-client -d -sw",
+       "escape": true
+     },
+     "custom/power": {
+    		"format": "⏻",
+    		"on-click": "wlogout",
+    		"tooltip": false,
+   	},
+}

@@ -1,0 +1,79 @@
+@import url("/home/zeld-a/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "Google Sans, ProFont IIx Nerd Font Propo";
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @background;
+}
+
+#workspaces {
+    background-color: @background;
+    padding: 0 5.6px 0 0;
+}
+
+#workspaces button {
+    color: @color3;
+}
+
+#workspaces button.active {
+    color: @foreground;
+}
+
+.modules-left {
+    margin-left: 12px;    
+}
+
+.modules-right {
+    margin-right: 12px;    
+}
+
+#battery,
+#pulseaudio,
+#mpris,
+#custom-pacman {
+    color: @color5; /* color5 */
+    background-color: @background; /* background */
+    margin: 0 15px 0 0px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+}
+
+#network {
+    color: @color2; /* color2 */
+    background-color: @background; /* background */
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+}
+
+#custom-notification {
+    color: @color4;
+    background-color: @background;
+    margin: 0 0 0 15px;
+    padding: 0 15px 0 15px;
+}
+
+#clock {
+    color: @color3; /* color3 */
+    background-color: @background; /* background */
+    margin: 0 15px 0 15px;
+    padding: 0 15px 0 15px;
+}
+
+#custom-power {
+    color: #B04A3A;
+    background-color: @background;
+    margin: 0 0 0 15px;
+    padding: 0 15px 0 15px;
+}
+
+#network {
+    color: @color4; /* color4 */
+}
+
+#pulseaudio {
+    color: @color5; /* color5 */
+}
