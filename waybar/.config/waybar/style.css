@@ -1,7 +1,6 @@
 @import url("/home/zeld-a/.cache/wal/colors-waybar.css");
 
 * {
-    background-color: @background;
     color: @foreground;
     border: none;
     border-radius: 0;
@@ -12,8 +11,7 @@
 }
 
 window#waybar {
-    opacity: 0.9;
-
+    background: alpha(@background, 0.6);
 }
 
 .modules-left {

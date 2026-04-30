@@ -4,7 +4,7 @@
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.6",
+      "model": "gpt-5.3-codex",
       "enable_thinking": false
     },
     "favorite_models": [],

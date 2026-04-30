@@ -54,7 +54,8 @@
     "format-disconnected": "󰤭",
     "max-length": 50,
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "on-click": "kitty --class=Impala -e impala"
+    "on-click": "kitty --class=Impala -e impala",
+    "interval": 5
   },
 
   "hyprland/workspaces": {
